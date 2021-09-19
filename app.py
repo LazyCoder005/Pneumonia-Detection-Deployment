@@ -82,5 +82,4 @@ def upload():
 
 
 if __name__ == '__main__':
-    const PORT = process.env.PORT || '8080
-    app.run()
+    app.run(debug=True)
