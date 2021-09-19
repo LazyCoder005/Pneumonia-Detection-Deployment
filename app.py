@@ -82,6 +82,7 @@ def upload():
 
 
 if __name__ == '__main__':
+    const PORT = process.env.PORT || '8080
     app.run(port=5002, threaded=False)
 
     # Serve the app with gevent
