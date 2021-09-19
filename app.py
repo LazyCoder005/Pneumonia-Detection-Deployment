@@ -82,7 +82,11 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5002, threaded=False)
+
+    # Serve the app with gevent
+    http_server = WSGIServer(('0.0.0.0', 5000), app)
+    http_server.serve_forever()
 # uncomment this section to serve the app locally with gevent at:  http://localhost:5000
 # Serve the app with gevent
 # http_server = WSGIServer(('', 5000), app)
